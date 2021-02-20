@@ -21,4 +21,8 @@ public abstract class Shape {
     public abstract void onAreaChanged();
     public abstract void SetArea();
     public abstract String ShapeInfo();
+    public Boolean CanFitInside(Shape obj) // verificam daca forma curenta poate incapea in alta forma
+    {
+        return this.area <= obj.area;
+    }
 }

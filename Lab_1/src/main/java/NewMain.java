@@ -34,6 +34,14 @@ public class NewMain {
         
         System.out.println(triunghi.ShapeInfo());
         
+        if(patrat.CanFitInside(triunghi))
+        {
+            System.out.println("The square is small enough to fit inside the triangle!");
+        }
+        else
+        {
+            System.out.println("The square is too big to fit inside the triangle! :(");
+        }
     }
     
 }
