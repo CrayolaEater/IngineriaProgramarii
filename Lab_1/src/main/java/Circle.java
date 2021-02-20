@@ -14,8 +14,14 @@ public class Circle extends Shape {
     private final double Pi = 3.14159;
     public Circle(double r)
     {
+        this.SetRadius(r);
+    }
+    
+    public void SetRadius(double r)
+    {
         this.radius = r;
     }
+    @Override
     public void SetArea()
     {
         this.area = this.Pi*this.radius*this.radius;
@@ -24,6 +30,12 @@ public class Circle extends Shape {
     @Override
     public void onAreaChanged()
     {
-        System.out.print("Arie cerc setata.\n");
+        System.out.print("Area circle changed to "+String.valueOf(this.area)+"\n");
+    }
+    @Override
+    public String ShapeInfo()
+    {
+        String s = "Shape type: {Circle}, " + "radius: " + String.valueOf(this.radius);
+        return s;
     }
 }

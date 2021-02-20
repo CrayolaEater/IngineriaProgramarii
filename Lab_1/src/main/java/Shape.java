@@ -19,4 +19,6 @@ public abstract class Shape {
         return this.area;
     }
     public abstract void onAreaChanged();
+    public abstract void SetArea();
+    public abstract String ShapeInfo();
 }
